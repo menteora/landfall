@@ -1,0 +1,8 @@
+{
+  "name": "Landfall",
+  "description": "Navigare in acque sconosciute e nebulose per scorgere la terra ferma. Il manifesto della procedura e dell'architettura sistemica per arrivare a landfall.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
