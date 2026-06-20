@@ -18,7 +18,7 @@ export function TagContent({ posts, allPosts, tag }: TagContentProps) {
   return (
     <PageLayout allPosts={allPosts} snap={true}>
       {/* Immersive Tag Hero Slide */}
-      <div className="min-h-screen flex flex-col justify-start snap-start px-6 md:px-12 relative overflow-hidden pt-20 md:pt-32">
+      <div className="min-h-screen flex flex-col justify-start snap-start px-4 sm:px-6 md:px-12 relative overflow-hidden pt-20 md:pt-32">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ export function TagContent({ posts, allPosts, tag }: TagContentProps) {
                   <StatusLine label="Archivio Tags" sublabel={`Filtro attivo: ${tag}`} theme="emerald" />
                 </div>
                 
-                <h1 className="text-5xl sm:text-6xl md:text-[6vw] font-serif tracking-tighter leading-none mb-8 italic text-zinc-900 dark:text-zinc-100">
+                <h1 className="text-4xl sm:text-6xl md:text-[6vw] font-serif tracking-tighter leading-none mb-8 italic text-zinc-900 dark:text-zinc-100">
                   {tag}
                 </h1>
 

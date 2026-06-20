@@ -49,7 +49,7 @@ export function PostCard({ post, index }: { post: Post; index: number }) {
             </span>
           </div>
           
-          <h2 className={`text-5xl md:text-[7vw] font-serif leading-[0.85] tracking-tighter transition-all duration-700 ease-out group-hover:translate-x-6 text-balance ${isRead ? 'opacity-40 italic font-light' : 'font-medium'}`}>
+          <h2 className={`text-4xl sm:text-5xl md:text-[7vw] font-serif leading-[0.85] tracking-tighter transition-all duration-700 ease-out md:group-hover:translate-x-6 text-balance break-words ${isRead ? 'opacity-40 italic font-light' : 'font-medium'}`}>
             {post.title}
           </h2>
   

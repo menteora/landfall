@@ -14,8 +14,8 @@ export function Header() {
   return (
     <header className={`fixed top-0 left-0 w-full z-[90] transition-all duration-500 pointer-events-none ${
       isScrolled 
-        ? 'bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-900 py-4 px-6 md:px-12' 
-        : 'p-6 md:px-12 md:py-8'
+        ? 'bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-900 py-3 px-4 sm:px-6 md:px-12' 
+        : 'p-4 sm:p-6 md:px-12 md:py-8'
     } flex justify-between items-center`}>
       <div className="flex items-center gap-6 pointer-events-auto">
         <Link href="/" onClick={() => setActivePostId(null)}>

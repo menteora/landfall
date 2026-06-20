@@ -107,8 +107,8 @@ export function PostDetail({ post, allPosts }: { post: Post; allPosts: Post[] })
 
       <div className={`fixed top-0 left-0 w-full transition-all duration-500 z-[110] pointer-events-none flex justify-between items-center ${
         headerScrolled 
-          ? 'bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-800 py-4 px-8' 
-          : 'p-8'
+          ? 'bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-800 py-4 px-4 sm:px-8' 
+          : 'p-4 sm:p-8'
       }`}>
         <button
           onClick={() => setActivePostId(null)}
@@ -145,7 +145,7 @@ export function PostDetail({ post, allPosts }: { post: Post; allPosts: Post[] })
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-6 py-48">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-48 overflow-x-hidden">
         <motion.header
           initial={{ y: 40, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -170,7 +170,7 @@ export function PostDetail({ post, allPosts }: { post: Post; allPosts: Post[] })
             </span>
           </div>
 
-          <h1 className="text-6xl md:text-[8vw] font-serif leading-[0.85] tracking-tighter mb-16">
+          <h1 className="text-4xl sm:text-6xl md:text-[8vw] font-serif leading-[0.85] tracking-tighter mb-16 break-words">
             {post.title}
           </h1>
 

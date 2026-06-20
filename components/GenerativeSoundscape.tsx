@@ -104,7 +104,7 @@ export function GenerativeSoundscape() {
   return (
     <button
       onClick={() => setIsMuted(!isMuted)}
-      className="fixed bottom-10 right-10 z-[120] pointer-events-auto p-3 rounded-full bg-zinc-100/10 dark:bg-zinc-900/10 backdrop-blur-md border border-zinc-200 dark:border-zinc-800/50 text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition-all group shadow-xl"
+      className="fixed bottom-10 right-10 z-[120] pointer-events-auto p-3 rounded-full bg-zinc-200/20 dark:bg-zinc-800/20 backdrop-blur-lg border border-zinc-300/30 dark:border-zinc-700/30 text-zinc-600 dark:text-zinc-400 hover:scale-110 active:scale-90 transition-all group"
     >
       <div className="relative">
         <AnimatePresence mode="wait">

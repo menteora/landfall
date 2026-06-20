@@ -37,7 +37,7 @@ export function HomeContent({ posts, graphData }: HomeContentProps) {
               <StatusLine label="Landfall Navigation Protocol 1.0" sublabel="System Active" />
             </div>
             
-            <div className="relative py-8 md:py-16 flex flex-col items-center justify-center min-h-[70vh] md:min-h-[65vh] px-2 md:px-8 overflow-hidden">
+            <div className="relative py-8 md:py-16 flex flex-col items-center justify-center min-h-[70vh] md:min-h-[65vh] px-3 md:px-8 overflow-hidden">
               {/* Immersive Landfall Background Image with slow cinematic pan/zoom & vignette overlay */}
               <div className="absolute inset-0 z-0 select-none overflow-hidden rounded-3xl border border-zinc-200/40 dark:border-zinc-800/20 shadow-inner">
                 <motion.div
@@ -73,7 +73,7 @@ export function HomeContent({ posts, graphData }: HomeContentProps) {
               <div className="relative w-full max-w-6xl flex flex-col items-center z-10 px-2 sm:px-4 overflow-hidden md:overflow-visible">
                 {/* Top Section: Abyss -> System */}
                 <div className="flex flex-col items-center group mb-8 md:mb-16 text-center w-full px-2">
-                  <h1 className="text-[10vw] sm:text-5xl md:text-[6.5vw] font-serif tracking-tighter leading-none group-hover:italic transition-all cursor-default flex items-center justify-center gap-2 sm:gap-8 w-full">
+                  <h1 className="text-4xl sm:text-5xl md:text-[6.5vw] font-serif tracking-tighter leading-none transition-all cursor-default flex items-center justify-center gap-2 sm:gap-8 w-full">
                     <span>Abyss</span>
                     <span className="font-sans font-light text-zinc-300 dark:text-zinc-800 select-none text-[0.8em]">→</span>
                     <span>System</span>
