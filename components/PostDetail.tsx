@@ -186,23 +186,25 @@ export function PostDetail({ post, allPosts }: { post: Post; allPosts: Post[] })
           </div>
         </motion.header>
 
-        <motion.div
-          initial={{ scale: 1.1, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-          viewport={{ once: true }}
-          className="relative aspect-video mb-24 overflow-hidden rounded-sm"
-        >
-          <BlurImage
-            src={post.image}
-            alt={post.title}
-            fill
-            sizes="(max-width: 896px) 100vw, 896px"
-            className="object-cover"
-            priority
-            referrerPolicy="no-referrer"
-          />
-        </motion.div>
+        {post.image && (
+          <motion.div
+            initial={{ scale: 1.1, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+            viewport={{ once: true }}
+            className="relative aspect-video mb-24 overflow-hidden rounded-sm"
+          >
+            <BlurImage
+              src={post.image}
+              alt={post.title}
+              fill
+              sizes="(max-width: 896px) 100vw, 896px"
+              className="object-cover"
+              priority
+              referrerPolicy="no-referrer"
+            />
+          </motion.div>
+        )}
 
         <div className="markdown-body prose dark:prose-invert max-w-none">
           <ReactMarkdown
@@ -249,16 +251,18 @@ export function PostDetail({ post, allPosts }: { post: Post; allPosts: Post[] })
                   }}
                   className="group relative flex flex-col h-full border border-zinc-100 dark:border-zinc-900 bg-white dark:bg-[#0a0a0a] overflow-hidden transition-all duration-700 hover:bg-zinc-50 dark:hover:bg-zinc-900/20 text-left"
                 >
-                  <div className="relative w-full aspect-[21/9] overflow-hidden">
-                    <BlurImage
-                      src={suggestion.image}
-                      alt={suggestion.title}
-                      fill
-                      className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
-                      referrerPolicy="no-referrer"
-                    />
-                    <div className="absolute inset-0 bg-zinc-900/20 mix-blend-overlay" />
-                  </div>
+                  {suggestion.image && (
+                    <div className="relative w-full aspect-[21/9] overflow-hidden">
+                      <BlurImage
+                        src={suggestion.image}
+                        alt={suggestion.title}
+                        fill
+                        className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="absolute inset-0 bg-zinc-900/20 mix-blend-overlay" />
+                    </div>
+                  )}
                   
                   <div className="p-8 md:p-10 flex-1 flex flex-col">
                     <div className="flex justify-between items-start mb-6">

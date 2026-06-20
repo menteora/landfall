@@ -28,7 +28,7 @@ export function PageLayout({ children, allPosts, snap = false }: PageLayoutProps
       <Header />
       
       <section 
-        className={`h-full overflow-y-auto scroll-smooth ${snap ? 'snap-y snap-mandatory' : ''}`}
+        className={`h-full overflow-y-auto overflow-x-hidden scroll-smooth ${snap ? 'snap-y snap-mandatory' : ''}`}
         onScroll={handleScroll}
       >
         <div className="min-h-full flex flex-col">

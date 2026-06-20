@@ -72,16 +72,18 @@ export function PostCard({ post, index }: { post: Post; index: number }) {
           </div>
         </div>
   
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 md:w-2/5 aspect-[4/5] opacity-20 md:opacity-10 group-hover:opacity-50 transition-all duration-1000 grayscale group-hover:grayscale-0 blur-[6px] group-hover:blur-0 translate-x-12 group-hover:translate-x-0 z-0">
-          <BlurImage
-            src={post.image}
-            alt={post.title}
-            fill
-            sizes="(max-width: 768px) 33vw, 40vw"
-            className="object-cover rounded-[1px] shadow-2xl"
-            referrerPolicy="no-referrer"
-          />
-        </div>
+        {post.image && (
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 md:w-2/5 aspect-[4/5] opacity-20 md:opacity-10 group-hover:opacity-50 transition-all duration-1000 grayscale group-hover:grayscale-0 blur-[6px] group-hover:blur-0 translate-x-12 group-hover:translate-x-0 z-0">
+            <BlurImage
+              src={post.image}
+              alt={post.title}
+              fill
+              sizes="(max-width: 768px) 33vw, 40vw"
+              className="object-cover rounded-[1px] shadow-2xl"
+              referrerPolicy="no-referrer"
+            />
+          </div>
+        )}
       </div>
     </motion.div>
   );

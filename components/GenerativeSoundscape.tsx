@@ -104,7 +104,7 @@ export function GenerativeSoundscape() {
   return (
     <button
       onClick={() => setIsMuted(!isMuted)}
-      className="fixed bottom-8 left-8 z-[120] pointer-events-auto p-3 rounded-full bg-white/10 dark:bg-black/10 backdrop-blur-md border border-zinc-100 dark:border-zinc-900 text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-all group"
+      className="fixed bottom-8 right-8 z-[120] pointer-events-auto p-3 rounded-full bg-white/10 dark:bg-black/10 backdrop-blur-md border border-zinc-100 dark:border-zinc-900 text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-all group"
     >
       <div className="relative">
         <AnimatePresence mode="wait">
@@ -129,7 +129,7 @@ export function GenerativeSoundscape() {
           )}
         </AnimatePresence>
       </div>
-      <span className="absolute left-full ml-4 font-mono text-[8px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap bg-white/80 dark:bg-black/80 backdrop-blur-sm px-2 py-1 rounded-sm border border-zinc-100 dark:border-zinc-900">
+      <span className="absolute right-full mr-4 font-mono text-[8px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap bg-white/80 dark:bg-black/80 backdrop-blur-sm px-2 py-1 rounded-sm border border-zinc-100 dark:border-zinc-900">
         {isMuted ? "Audio Off" : "Ambient Activo"}
       </span>
     </button>
