@@ -165,8 +165,8 @@ export function PostDetail({ post, allPosts }: { post: Post; allPosts: Post[] })
               <TypeIcon type={post.type} className="w-4 h-4" />
             </div>
             <div className="h-[px] flex-1 bg-zinc-100 dark:bg-zinc-800" />
-            <span className="text-[9px] font-medium tracking-[0.2em] uppercase text-zinc-500 dark:text-zinc-400">
-              {post.date.split('-').join(' // ')}
+            <span className="text-[9px] font-medium tracking-[0.2em] uppercase text-zinc-500 dark:text-zinc-400 flex flex-col md:flex-row md:items-center gap-1 md:gap-0">
+              <span className="whitespace-nowrap">{post.date.split('-').join(' // ')}</span>
             </span>
           </div>
 

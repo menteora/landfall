@@ -42,8 +42,10 @@ export function PostCard({ post, index }: { post: Post; index: number }) {
               <TypeIcon type={post.type} className="w-3 h-3" />
             </div>
             <div className="h-[1px] flex-1 bg-zinc-100 dark:bg-zinc-800 min-w-8" />
-            <span className="text-[10px] text-zinc-400 uppercase tracking-widest flex items-center gap-2">
-              {post.slug} <span className="opacity-30">/</span> {post.date.split('-').join('.')}
+            <span className="text-[10px] text-zinc-400 uppercase tracking-widest flex flex-col md:flex-row md:items-center gap-1 md:gap-2">
+              <span className="truncate max-w-[120px] sm:max-w-none">{post.slug}</span>
+              <span className="hidden md:inline opacity-30">/</span>
+              <span className="flex-shrink-0">{post.date.split('-').join('.')}</span>
             </span>
           </div>
           

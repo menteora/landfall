@@ -104,33 +104,35 @@ export function GenerativeSoundscape() {
   return (
     <button
       onClick={() => setIsMuted(!isMuted)}
-      className="fixed bottom-8 right-8 z-[120] pointer-events-auto p-3 rounded-full bg-white/10 dark:bg-black/10 backdrop-blur-md border border-zinc-100 dark:border-zinc-900 text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-all group"
+      className="fixed bottom-10 right-10 z-[120] pointer-events-auto p-3 rounded-full bg-zinc-100/10 dark:bg-zinc-900/10 backdrop-blur-md border border-zinc-200 dark:border-zinc-800/50 text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition-all group shadow-xl"
     >
       <div className="relative">
         <AnimatePresence mode="wait">
           {isMuted ? (
             <motion.div
               key="muted"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0, opacity: 0 }}
+              transition={{ duration: 0.2 }}
             >
-              <VolumeX className="w-4 h-4" />
+              <VolumeX className="w-5 h-5" />
             </motion.div>
           ) : (
             <motion.div
               key="unmuted"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0, opacity: 0 }}
+              transition={{ duration: 0.2 }}
             >
-              <Volume2 className="w-4 h-4 text-emerald-500 animate-pulse" />
+              <Volume2 className="w-5 h-5 text-emerald-500 animate-pulse" />
             </motion.div>
           )}
         </AnimatePresence>
       </div>
-      <span className="absolute right-full mr-4 font-mono text-[8px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap bg-white/80 dark:bg-black/80 backdrop-blur-sm px-2 py-1 rounded-sm border border-zinc-100 dark:border-zinc-900">
-        {isMuted ? "Audio Off" : "Ambient Activo"}
+      <span className="absolute right-full mr-4 font-mono text-[9px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-3 py-1.5 rounded-sm border border-zinc-800 dark:border-zinc-200 shadow-2xl">
+        {isMuted ? "Audio Off" : "Ambient Active"}
       </span>
     </button>
   );
