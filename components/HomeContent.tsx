@@ -9,6 +9,7 @@ import { Post, GraphData } from '@/types/post';
 import { NeuralGraph } from '@/components/NeuralGraph';
 import { StatusLine } from '@/components/StatusLine';
 import { ArrowDown } from 'lucide-react';
+import { getAssetUrl } from '@/lib/utils';
 
 interface HomeContentProps {
   posts: Post[];
@@ -46,7 +47,7 @@ export function HomeContent({ posts, graphData }: HomeContentProps) {
                   className="w-full h-full relative"
                 >
                   <img
-                    src="/landfall_hero.jpg"
+                    src={getAssetUrl('/landfall_hero.jpg')}
                     alt="Landfall Hero - La Terra Ferma"
                     className="w-full h-full object-cover dark:brightness-75 transition-all duration-1000 grayscale hover:grayscale-0"
                     referrerPolicy="no-referrer"
